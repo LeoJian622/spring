@@ -1,7 +1,6 @@
 package cn.sxt.service.impl;
 
 import cn.sxt.dao.UserDao;
-import cn.sxt.dao.impl.UserDaoMysqlImpl;
 import cn.sxt.service.UserService;
 
 public class UserServiceImpl implements UserService{

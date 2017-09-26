@@ -11,4 +11,3 @@
 		<property name="userDao" ref="mysqlDao"/>
 	</bean>
 </beans>
-
