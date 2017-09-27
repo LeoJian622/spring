@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean就是java对象 由spring来创建和管理 -->
+
+	<!-- P命名空间注入 xmlns:p="http://www.springframework.org/schema/p" -->
+	<!-- P命名空间注入 <bean id="addr" class="cn.sxt.vo.Address" p:address="China" 
+		/> -->
+
+	<!-- addr通过bean注入 -->
+	<!-- bean作用域 
+		 singleton单例 整个容器中只有一个对象实例  （default）
+		 prototype原型 每次获取bean都产生一个新的对象
+		 request 每次请求时创建一个新的对象
+		 session 在会话的范围内是一个对象
+		 global session 只在portlet下有用，表示application
+		 application 在应用的范围是一个对象
+	 -->
+	<bean id="addr" class="cn.sxt.vo.Address">
+		<property name="address" value="China"></property>
+	</bean>
+	
+	<!-- student常量注入 -->
+	<bean id="student" class="cn.sxt.vo.Student">
+		<property name="name" value="张三" />
+		<!-- addr通过bean注入 -->
+		<property name="addr" ref="addr" />
+		<!-- 数组注入 -->
+		<property name="books">
+			<array>
+				<value>龙族I：火之晨曦</value>
+				<value>龙族II：悼亡者之瞳</value>
+				<value>龙族III：黑月之潮</value>
+				<value>龙族IV：奥丁之渊</value>
+			</array>
+		</property>
+		<property name="hobbies">
+			<list>
+				<value>羽毛球</value>
+				<value>乒乓球</value>
+				<value>台球</value>
+			</list>
+		</property>
+		<property name="card">
+			<map>
+				<entry key="中国银行" value="1234567891234598" />
+				<entry>
+					<key>
+						<value>建设银行</value>
+					</key>
+					<value>54543544545465454</value>
+				</entry>
+			</map>
+		</property>
+		<property name="games">
+			<set>
+				<value>lol</value>
+				<value>dota</value>
+				<value>冒险岛2</value>
+				<value>风暴英雄</value>
+			</set>
+		</property>
+		<property name="wife">
+			<null />
+		</property>
+		<property name="info">
+			<props>
+				<prop key="学号">1111111</prop>
+				<prop key="sex">男</prop>
+				<prop key="name">小明</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans> 
