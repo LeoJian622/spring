@@ -17,6 +17,8 @@
 		 session 在会话的范围内是一个对象
 		 global session 只在portlet下有用，表示application
 		 application 在应用的范围是一个对象
+		 
+		 整合struts2和spring时 需要将action设为scope="prototype"
 	 -->
 	<bean id="addr" class="cn.sxt.vo.Address">
 		<property name="address" value="China"></property>
