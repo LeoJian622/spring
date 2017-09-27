@@ -14,9 +14,9 @@
 		 class 是bean的全限定名 = 包名 + 类名 
 		 如果不配置id和name 那么可以根据applicationContext.getBean(Class)获取对象
 	-->
-	<!-- <bean id="user" name="u1,u2,u3 u4;u5" class="cn.sxt.vo.User">
+	<bean id="user" name="u1,u2,u3 u4;u5" class="cn.sxt.vo.User">
 		<property name="Name" value="张三"></property>
-	</bean> -->
+	</bean>
 	<!-- 设置别名 -->
 	<alias name="user" alias="user1"/>
 	
@@ -38,5 +38,5 @@
 	<!-- <constructor-arg index="0" value="王五"></constructor-arg> -->
 	<!--</bean> -->
 	
-	<import resource="config/spring/entity.xml"/>
+	<!-- <import resource="XML文件"/> -->
 </beans> 

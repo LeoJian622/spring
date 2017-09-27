@@ -5,11 +5,21 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- bean就是java对象 由spring来创建和管理 -->
 
+	
 	<!-- bean通过无参构造方法创建对象 -->
-	<bean id="user" class="cn.sxt.vo.User">
+	
+	<!-- id是bean的标识符 要唯一 如果没有配置id，name是默认标识符
+		  如果配置id，又配置了name 那么name是别名
+		 name可以设置多个别名 分隔符可以使空格 逗号 封号
+		 class 是bean的全限定名 = 包名 + 类名 
+		 如果不配置id和name 那么可以根据applicationContext.getBean(Class)获取对象
+	-->
+	<!-- <bean id="user" name="u1,u2,u3 u4;u5" class="cn.sxt.vo.User">
 		<property name="Name" value="张三"></property>
-	</bean>
-
+	</bean> -->
+	<!-- 设置别名 -->
+	<alias name="user" alias="user1"/>
+	
 	<!-- bean通过有参构造方法创建对象 -->
 	<!-- <bean id="user" class="cn.sxt.vo.User"> -->
 	<!-- index指构造方法 参数下标从0开始 设置 <constructor-arg index="0" value="李四" /> -->
@@ -27,4 +37,6 @@
 	<!--<bean id="user" factory-bean="userFactory" factory-method="newInstance"> -->
 	<!-- <constructor-arg index="0" value="王五"></constructor-arg> -->
 	<!--</bean> -->
+	
+	<import resource="config/spring/entity.xml"/>
 </beans> 

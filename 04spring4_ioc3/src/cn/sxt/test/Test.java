@@ -10,7 +10,17 @@ public class Test {
 
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
 				"beans.xml");
-		User user = (User) applicationContext.getBean("user");
+		User user = (User) applicationContext.getBean("user1");
 		user.show();
+		User user1 = (User) applicationContext.getBean("u1");
+		user1.show();
+		User user2= (User) applicationContext.getBean("u2");
+		user2.show();
+		User user3 = (User) applicationContext.getBean("u3");
+		user3.show();
+		User user4 = (User) applicationContext.getBean("u4");
+		user4.show();
+		User user5 = (User) applicationContext.getBean("u5");
+		user5.show();
 	}
 }
