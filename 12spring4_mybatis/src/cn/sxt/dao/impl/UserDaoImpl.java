@@ -16,8 +16,12 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public List<User> selectUsers() {
-		return sqlSessionTemplate
-				.selectList("cn.sxt.vo.user.mapper.selectAll");
+		User user = new User();
+		user.setName("u4");
+		user.setPwd("123");
+		sqlSessionTemplate.insert("cn.sxt.vo.user.mapper.addUser", user);
+		sqlSessionTemplate.delete("cn.sxt.vo.user.mapper.removeUser",20);
+		return sqlSessionTemplate.selectList("cn.sxt.vo.user.mapper.selectAll");
 	}
 
 }

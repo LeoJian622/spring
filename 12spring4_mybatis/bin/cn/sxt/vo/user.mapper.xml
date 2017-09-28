@@ -6,4 +6,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectAll" resultType="User">
 		select * from user
 	</select>
+	<insert id="addUser" parameterType="User" useGeneratedKeys="true" >
+		insert into user(name,pwd) values(#{name},#{pwd})
+	</insert>
+	<delete id="removeUser">
+		delete from user where id=#{id}
+	</delete>
 </mapper> 
