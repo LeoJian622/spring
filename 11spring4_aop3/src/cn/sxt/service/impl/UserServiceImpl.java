@@ -1,12 +1,12 @@
-package cn.sxt.service;
+package cn.sxt.service.impl;
+
+import cn.sxt.service.UserService;
 
 public class UserServiceImpl implements UserService {
 
 	@Override
 	public void add() {
-		//公共的业务--日志，安全，权限，缓存，事物等等
-		//a.log();增加依赖等。
-		System.out.println("add");
+		System.out.println("---------add---------");
 	}
 
 	@Override
@@ -15,8 +15,9 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void delete() {
-		System.out.println("delete");
+	public int delete() {
+		System.out.println("---------delete---------");
+		return 1;
 	}
 
 	@Override
