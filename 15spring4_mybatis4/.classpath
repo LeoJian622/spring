@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="lib/mybatislib/ant-1.9.6.jar"/>
 	<classpathentry kind="lib" path="lib/mybatislib/ant-launcher-1.9.6.jar"/>
 	<classpathentry kind="lib" path="lib/mybatislib/asm-5.2.jar"/>
@@ -21,7 +20,11 @@
 	<classpathentry kind="lib" path="lib/spring-aop-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-aspects-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-beans-4.1.6.RELEASE.jar"/>
-	<classpathentry kind="lib" path="lib/spring-context-4.1.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-4.1.6.RELEASE.jar" sourcepath="E:/spring-framework-4.1.6.RELEASE/libs/spring-context-4.1.6.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="lib/spring-context-support-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-core-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-expression-4.1.6.RELEASE.jar"/>
@@ -32,5 +35,6 @@
 	<classpathentry kind="lib" path="lib/spring-webmvc-4.1.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/mybatis-spring-1.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.20-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
