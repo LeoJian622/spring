@@ -9,6 +9,6 @@ public class Test {
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 		UserService userService = (UserService)applicationContext.getBean("userService");
-		System.out.println(userService.selectUsers().size());
+		System.err.println(userService.selectUsers().size());
 	}
 }
